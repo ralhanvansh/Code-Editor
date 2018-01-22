@@ -1,0 +1,5 @@
+<p>Click "Try it" to call a function with arguments</p>
+
+<button onclick="myFunction('Harry Potter','Wizard')">Try it</button>
+
+<p id="demo"></p>

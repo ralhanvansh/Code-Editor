@@ -1,0 +1,53 @@
+.editorcontainer{
+  margin: 50px 20px 30px 20px;
+  padding: 0px 15px;
+}
+*:focus {outline:none !important}
+.codearea{
+	background-color: white;
+	height: 400px;
+	max-height: 500px;
+  border: 1px solid dimgrey;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.paddingset{
+	padding: 0px;
+}
+.label{
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	float: left;
+	font-size: 15px;
+	z-index: 1;
+}
+textarea {
+	height: 100%;
+	width: 100%;
+	margin: 40px 0px 0px 20px !important;
+	font-family: "Courier New";
+	border: none;
+}
+
+.ResultContainer{
+	position: relative;
+	border: 1px solid dimgrey;
+	height: auto;
+	min-height: 350px;
+}
+iframe{
+  margin-top: 40px;
+  margin-left: 15px;
+  border: none;
+  height: auto;
+  min-height: 350px;
+  width: 100%;
+}
+.resultarea{
+  height: auto;
+  min-height: 350px;
+  width: 100%;
+}
