@@ -1,7 +1,8 @@
 
+
 <header class="header-fixed">
 	<div class="header-limiter">
-		<h1><a href="#">Company<span>logo</span></a></h1>
+		<h1><a href="#">Code Editor</span></a></h1>
 		<button id="btn-result" class="btn navbar-btn btn-warning pull-left">JS RUN</button>
 		<nav>
 			<a href="#">Home</a>
@@ -16,29 +17,22 @@
 
 <div class="container-fluid editorcontainer">
   <div class="row">
-      <div class="paddingset col-sm-4">
-        <div class="codearea HtmlContainer">
-          <label class="label label-primary">HTMl</label>
-          <textarea id="HtmlText" placeholder="WRITE HTML HERE"></textarea>
-        </div>
-      </div>
-
-      <div class="paddingset col-sm-4 ">
-        <div class="codearea CssContainer">
-          <label class="label label-primary">CSS</label>
-          <textarea id="CSSText" placeholder="WRITE CSS HERE"></textarea>
-        </div>
-      </div>
-
-      <div class="paddingset col-sm-4">
-        <div class="codearea JsContainer">
-          <label class="label label-primary">JS</label>
-          <textarea id="JSText" placeholder="WRITE JS HERE"></textarea>
-        </div>
-      </div>
+    <div class="col-sm-4 codearea HtmlContainer">
+      <label class="label label-primary">HTMl</label>
+      <textarea id="HtmlText" placeholder="WRITE HTML HERE"></textarea>
     </div>
-      <div class="row ResultContainer">
-        <label class="label label-primary">Result</label>
-        <iframe id="ResultArea"></iframe>
-      </div>
+    <div class="col-sm-4 codearea CssContainer">
+      <label class="label label-primary">CSS</label>
+      <textarea id="CSSText" placeholder="WRITE CSS HERE"></textarea>
+    </div>
+
+    <div class="col-sm-4 codearea JsContainer">
+      <label class="label label-primary">JS</label>
+      <textarea id="JSText" placeholder="WRITE JS HERE"></textarea>
+    </div>
+  </div>
+    <div class="row ResultContainer">
+      <label class="label label-primary">Result</label>
+      <div id="ResultArea"></div>
+    </div>
 </div>

@@ -11,11 +11,9 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	position: relative;
+  padding: 0px;
 }
 
-.paddingset{
-	padding: 0px;
-}
 .label{
 	position: absolute;
 	top: 15px;
@@ -38,14 +36,7 @@ textarea {
 	height: auto;
 	min-height: 350px;
 }
-iframe{
-  margin-top: 40px;
-  margin-left: 15px;
-  border: none;
-  height: auto;
-  min-height: 350px;
-  width: 100%;
-}
+
 .resultarea{
   height: auto;
   min-height: 350px;
