@@ -13,15 +13,12 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 
 
 $(document).ready(function(){
-
   // $("#HtmlText").load("html.txt");
   // $("#CSSText").load("css.txt");
   // $("#JSText").load("js.txt");
-
       var defaultHTMLInput = "<div class='loader'></div>\n<div class='loader second'></div>";
 			var defaultCSSInput =  ".loader{"+
     								"\nbackground:grey;"+
@@ -49,27 +46,27 @@ $(document).ready(function(){
 			    					"\nanimation-direction:reverse;"+
 			    					"}";
 
-
   $("#HtmlText").html(defaultHTMLInput);
   $("#CSSText").html(defaultCSSInput);
 
-  $("#ResultArea").append( "<div id = 'htmlpart'>" +  defaultHTMLInput + "</div>",'<div id = "csspart"><style>' + defaultCSSInput + "</style></div>", "<div id='jspart'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>" + "</script></div>");
-
+  $("#ResultArea").append( "<div id = 'htmlpart'>" +  defaultHTMLInput + "</div>",'<div id = "csspart"><style>' + defaultCSSInput + "</style></div>", "<div id='jspart'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script></div>");
+  // $('#htmlpart').append('<div id="jspart"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">' + "</script></div>");
   $("#HtmlText").on('keyup', function(){
-    $("#ResultArea").find("#htmlpart").html($(this).val());
+    $("#ResultArea").find("#htmlpart").remove();
+    $("#ResultArea").append("<div id = 'htmlpart'>" +  $(this).val() + "</div>");
   });
 
   $("#CSSText").on('keyup', function(){
-    $("#ResultArea").find("#csspart").html("<style>" + $(this).val() + "</style>");
+    $("#ResultArea").find("#csspart").remove();
+    $("#ResultArea").append('<div id = "csspart"><style>' + $(this).val() + "</style></div>");
   });
 
   $("#JSText").on('change', function(){
-    $("#ResultArea").find("#jspart").remove();
-    $("#ResultArea").append('<div id="jspart"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">'+ $(this).val() + '</script></div>');
+    $("#ResultArea").empty();
+    $('#ResultArea').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" id="jspart" >' + $(this).val() + "</script>" + "<div id = 'htmlpart'>" +  $("#HtmlText").val() + "</div>" + '<div id = "csspart"><style>' + $("#CSSText").val() + "</style></div>");
   });
-
-  $("#btn-result").on('click',function(){
-    $("#ResultArea").find("#jspart").remove();
-    $("#ResultArea").append('<div id="jspart"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">'+ $("#JSText").val() + '</script></div>');
-	 });
-});
+  // $("#btn-result").on('click',function(){
+  //   $("#ResultArea").empty();
+  //   $("#ResultArea").append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" id="jspart" >' + $("#jspart").val() + "</script>" + "<div id = 'htmlpart'>" +  $("#HtmlText").val() + "</div>" + '<div id = "csspart"><style>' + $("#CSSText").val() + "</style></div>");
+  // });
+  });
